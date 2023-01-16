@@ -1,0 +1,1 @@
+Dice.java ----> javac l2.java ----> java l2
