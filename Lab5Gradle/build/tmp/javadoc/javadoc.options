@@ -1,0 +1,16 @@
+-classpath 'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\build\\classes\\java\\main;C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\build\\resources\\main'
+-d 'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\build\\docs\\javadoc'
+-doctitle 'Lab5Gradle 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'Lab5Gradle 1.0-SNAPSHOT API'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\computer.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\Dice.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DiceGame.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DiceGame2.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DiceGraphic.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DiceGraphicCheating.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DiceHand.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\DicePlayer.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\classes\\monkey.java'
+'C:\\Users\\kemal\\OneDrive\\Skrivbord\\uni-material\\A01 OOP\\Lab5Gradle\\src\\main\\java\\l5.java'

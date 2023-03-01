@@ -1,0 +1,48 @@
+Plugins:
+Bundled analyzers:
+  - Python Code Quality and Security 3.19.0.10254 (python)
+  - Go Code Quality and Security 1.11.0.3905 (go)
+  - JaCoCo 1.1.1.1157 (jacoco)
+  - Kotlin Code Quality and Security 2.10.0.1456 (kotlin)
+  - IaC Code Quality and Security 1.9.2.2279 (iac)
+  - JavaScript/TypeScript/CSS Code Quality and Security 9.9.0.19492 (javascript)
+  - Ruby Code Quality and Security 1.11.0.3905 (ruby)
+  - Scala Code Quality and Security 1.11.0.3905 (sonarscala)
+  - C# Code Quality and Security 8.46.0.54807 (csharp)
+  - Java Code Quality and Security 7.14.0.30229 (java)
+  - HTML Code Quality and Security 3.6.0.3106 (web)
+  - Flex Code Quality and Security 2.7.0.2865 (flex)
+  - XML Code Quality and Security 2.6.1.3686 (xml)
+  - PHP Code Quality and Security 3.25.0.9077 (php)
+  - Text file Code Quality and Security 1.1.0.282 (text)
+  - VB.NET Code Quality and Security 8.46.0.54807 (vbnet)
+  - Configuration detection fot Code Quality and Security 1.2.0.267 (config)
+Global server settings:
+  - sonar.core.id=147B411E-AYRCstJxRsN4DiyWRevG
+  - sonar.core.startTime=2022-11-04T14:00:48+0100
+  - sonar.forceAuthentication=false
+Project server settings:
+Project scanner properties:
+  - sonar.binaries=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\classes\java\main
+  - sonar.host.url=http://localhost:9000
+  - sonar.jacoco.reportPath=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\jacoco\test.exec
+  - sonar.jacoco.reportPaths=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\jacoco\test.exec
+  - sonar.java.binaries=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\classes\java\main
+  - sonar.java.jdkHome=C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot
+  - sonar.java.source=17
+  - sonar.java.target=17
+  - sonar.java.test.binaries=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\classes\java\test
+  - sonar.java.test.libraries=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\classes\java\main,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.8.2\ddeafe92fc263f895bfb73ffeca7fd56e23c2cce\junit-jupiter-params-5.8.2.jar,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.8.2\4c21029217adf07e4c0d0c5e192b6bf610c94bdc\junit-jupiter-api-5.8.2.jar,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.8.2\32c8b8617c1342376fd5af2053da6410d8866861\junit-platform-commons-1.8.2.jar,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter\5.8.2\5a817b1e63f1217e5c586090c45e681281f097ad\junit-jupiter-5.8.2.jar,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.2.0\28c11eb91f9b6d8e200631d46e20a7f407f2a046\opentest4j-1.2.0.jar,C:\Users\kemal\.gradle\caches\modules-2\files-2.1\org.apiguardian\apiguardian-api\1.1.2\a231e0d844d2721b0fa1b2...
+  - sonar.junit.reportPaths=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\test-results\test
+  - sonar.junit.reportsPath=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\test-results\test
+  - sonar.projectBaseDir=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle
+  - sonar.projectKey=org.example:Lab5Gradle
+  - sonar.projectName=Lab5Gradle
+  - sonar.projectVersion=1.0-SNAPSHOT
+  - sonar.scanner.app=ScannerGradle
+  - sonar.scanner.appVersion=3.4.0.2513/Gradle 7.4
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\src\main\java
+  - sonar.surefire.reportsPath=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\test-results\test
+  - sonar.tests=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\src\test\java
+  - sonar.working.directory=C:\Users\kemal\OneDrive\Skrivbord\uni-material\A01 OOP\Lab5Gradle\build\sonar

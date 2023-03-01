@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Dice.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab4Gradle</a> &gt; <a href="index.source.html" class="el_package">classes</a> &gt; <span class="el_source">Dice.java</span></div><h1>Dice.java</h1><pre class="source lang-java linenums">package classes;
+
+/**
+ * This class will roll a dice. It works by simply defining a dice as beeing an object with 6 sides
+ * and then giving a random number from 1-6.
+ */
+public class Dice implements DiceGraphic {
+<span class="fc" id="L8">    int lastRoll = 0;</span>
+
+<span class="fc" id="L10">    int sides = 6;</span>
+
+<span class="fc" id="L12">    public Dice () {</span>
+<span class="fc" id="L13">        lastRoll = 0;</span>
+<span class="fc" id="L14">    }</span>
+
+    /**
+     * This is the roll method and will simply pick a number from 1 to 6.
+     * @return a random number 1-6.
+     */
+    public int roll () {
+<span class="fc" id="L21">        lastRoll = (int) (Math.random() * sides + 1); </span>
+<span class="fc" id="L22">        return lastRoll;        // Picking random from 1 to 6.</span>
+    }
+
+    /**
+     * @return a string representation of an int.
+     */
+    public String toString() {
+<span class="fc" id="L29">        return Integer.toString(lastRoll);      // Converts from int to string</span>
+    }                                           // Necessery for correct compiling.
+
+    @Override
+    public String printGraphic(){
+<span class="fc" id="L34">        return graphicDie[lastRoll];</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

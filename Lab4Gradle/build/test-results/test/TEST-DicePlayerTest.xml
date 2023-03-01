@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DicePlayerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-11-03T17:04:05" hostname="KEMO" time="0.011">
+  <properties/>
+  <testcase name="dicePlay()" classname="DicePlayerTest" time="0.002"/>
+  <testcase name="sum()" classname="DicePlayerTest" time="0.002"/>
+  <testcase name="hold()" classname="DicePlayerTest" time="0.001"/>
+  <testcase name="rollalldice()" classname="DicePlayerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

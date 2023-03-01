@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>L5.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab5Gradle</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">L5.java</span></div><h1>L5.java</h1><pre class="source lang-java linenums">import classes.*;
+
+import java.util.Scanner;
+
+/**
+ * the main class
+ */
+<span class="nc" id="L8">public class L5 implements DiceGraphicCheating{</span>
+    public static void main(String[] args){
+
+<span class="nc" id="L11">        Dice die = new Dice();</span>
+
+<span class="nc" id="L13">        Scanner sc = new Scanner(System.in);</span>
+
+<span class="nc" id="L15">        Boolean done = false;</span>
+
+<span class="nc bnc" id="L17" title="All 2 branches missed.">        while(!done){</span>
+<span class="nc" id="L18">            System.out.println(&quot;\n_____Please pick an option_____&quot;);</span>
+<span class="nc" id="L19">            System.out.println(&quot;1, Roll a dice :&quot;);</span>
+<span class="nc" id="L20">            System.out.println(&quot;2, Roll a graphic dice :&quot;);</span>
+<span class="nc" id="L21">            System.out.println(&quot;3, Cheat the dice :&quot;);</span>
+<span class="nc" id="L22">            System.out.println(&quot;4, Hold any type of dice :&quot;);</span>
+<span class="nc" id="L23">            System.out.println(&quot;5, Roll the dice and re-roll. :&quot;);</span>
+<span class="nc" id="L24">            System.out.println(&quot;6, Play Yatzy :&quot;);</span>
+<span class="nc" id="L25">            System.out.println(&quot;7, play yatzy with oponents&quot;);</span>
+<span class="nc" id="L26">            System.out.println(&quot;E, Exit the program :&quot;);</span>
+<span class="nc" id="L27">            System.out.println(&quot;_______________________________&quot;);</span>
+
+<span class="nc" id="L29">            String option = sc.nextLine();</span>
+<span class="nc bnc" id="L30" title="All 9 branches missed.">            switch(option){</span>
+
+                case &quot;1&quot;:
+<span class="nc" id="L33">                    die.roll();</span>
+<span class="nc" id="L34">                    System.out.println(&quot;The rolled dice is : &quot; + die);</span>
+<span class="nc" id="L35">                    break;</span>
+
+                case &quot;2&quot;:
+<span class="nc" id="L38">                    die.roll();</span>
+<span class="nc" id="L39">                    System.out.println(&quot;The rolled die is : &quot; + die.printGraphic());</span>
+<span class="nc" id="L40">                    break;</span>
+
+                case &quot;3&quot;:
+<span class="nc" id="L43">                    die.roll();</span>
+<span class="nc" id="L44">                    System.out.println(&quot;The rolled die was : &quot; + die);</span>
+
+<span class="nc" id="L46">                    System.out.println(&quot;Cheat the dice by setting a new value : &quot;);</span>
+<span class="nc" id="L47">                    int value = sc.nextInt();</span>
+
+<span class="nc" id="L49">                    die = DiceGraphicCheating.setRoll(value);</span>
+
+<span class="nc" id="L51">                    System.out.println(&quot;The new dice value is : &quot; + die);</span>
+
+<span class="nc" id="L53">                    sc.nextLine();</span>
+<span class="nc" id="L54">                    break;</span>
+
+                case &quot;4&quot;:
+<span class="nc" id="L57">                    DiceHand hand = new DiceHand(4);    // How many dices we want to play with</span>
+<span class="nc" id="L58">                    hand.rollAllDice();</span>
+<span class="nc" id="L59">                    System.out.println(&quot;The dice are : &quot; + hand);       // First dices</span>
+
+<span class="nc" id="L61">                    System.out.println(&quot;The Re-Rolled dices are : &quot; + hand);</span>
+<span class="nc" id="L62">                    hand.roll(4);</span>
+
+<span class="nc" id="L64">                    System.out.println(&quot;The new values are now : &quot; + hand);</span>
+
+<span class="nc" id="L66">                    break;</span>
+
+                case &quot;5&quot;:
+<span class="nc" id="L69">                    DicePlayer player = new DicePlayer();</span>
+<span class="nc" id="L70">                    player.rollAllDice();</span>
+
+<span class="nc" id="L72">                    System.out.println(&quot;The players values are : \n&quot; + player);</span>
+
+<span class="nc" id="L74">                    player.roll(1);     // This will re roll the first die because we specified (index - 1) in the class</span>
+<span class="nc" id="L75">                    player.roll(2);     //  We can re roll several dices but we need to call the method again</span>
+
+<span class="nc" id="L77">                    System.out.println(&quot;The values for the player is : \n&quot; + player);</span>
+
+                    //player.getDie(0);   //  this will show us the first element in the list (element &quot;0&quot;).
+
+<span class="nc" id="L81">                    break;</span>
+
+                case &quot;6&quot;:
+<span class="nc" id="L84">                    DiceGame yatzy = new DiceGame();</span>
+<span class="nc" id="L85">                    yatzy.Yatzy();</span>
+
+<span class="nc" id="L87">                    break;</span>
+
+                case &quot;7&quot;:
+<span class="nc" id="L90">                    DiceGame2 yatzy2 = new DiceGame2();</span>
+<span class="nc" id="L91">                    yatzy2.Yatzy();</span>
+
+<span class="nc" id="L93">                    break;</span>
+
+                case &quot;E&quot;:
+<span class="nc" id="L96">                    sc.close();</span>
+<span class="nc" id="L97">                    done = true;</span>
+<span class="nc" id="L98">                    System.exit(0);</span>
+<span class="nc" id="L99">                    break;</span>
+
+                default:
+<span class="nc" id="L102">                    System.out.println(&quot;Not a valid choice&quot;);</span>
+                    break;
+            }
+<span class="nc" id="L105">        }</span>
+<span class="nc" id="L106">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

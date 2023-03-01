@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="computerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-04T15:56:48" hostname="KEMO" time="0.01">
+  <properties/>
+  <testcase name="computerplay()" classname="computerTest" time="0.003"/>
+  <testcase name="result()" classname="computerTest" time="0.002"/>
+  <testcase name="rollalldice()" classname="computerTest" time="0.002"/>
+  <system-out><![CDATA[the result is : you got five of a kind! YATZEE!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>computer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab4Gradle</a> &gt; <a href="index.source.html" class="el_package">classes</a> &gt; <span class="el_source">computer.java</span></div><h1>computer.java</h1><pre class="source lang-java linenums">package classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class computer extends DiceHand {
+<span class="fc" id="L7">    ArrayList&lt;Integer&gt; hold = new ArrayList&lt;&gt;();</span>
+
+    public computer(){
+<span class="fc" id="L10">        super(5);   // &quot;super()&quot; calls on the variables and methods in the parent class</span>
+<span class="fc" id="L11">    }</span>
+    public void rollAllDice(){
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 0; i &lt; DiceHand.size(); i++) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            if (hold.contains(i)) {</span>
+<span class="fc" id="L15">                continue;</span>
+            }
+<span class="fc" id="L17">            DiceHand.get(i).roll();</span>
+        }
+
+<span class="fc" id="L20">    }</span>
+
+    public String result(){
+<span class="fc" id="L23">        List&lt;Integer&gt; val = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for(Dice die: this.DiceHand){</span>
+<span class="fc" id="L26">            val.add(Integer.parseInt(die.toString()));</span>
+<span class="fc" id="L27">        }</span>
+
+<span class="fc" id="L29">        int element = 0;</span>
+<span class="fc" id="L30">        int count = 1;</span>
+
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for(int i = 0; i &lt; val.size(); i++){</span>
+<span class="fc" id="L33">            int tempelement = val.get(i);</span>
+<span class="fc" id="L34">            int tempcount = 0;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            for(int k = 1; k &lt; val.size(); k++){</span>
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">                if(val.get(k) == tempelement)   {</span>
+<span class="fc" id="L37">                    tempcount++;</span>
+                }
+            }
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if(tempcount &gt; count){</span>
+<span class="fc" id="L41">                element = tempelement;</span>
+<span class="fc" id="L42">                count = tempcount;</span>
+            }
+        }
+
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if(count == 0) {</span>
+<span class="nc" id="L47">            System.out.println(&quot;the result is : You got one of a kind! Thats terrible!&quot;); }</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        else if(count == 1){</span>
+<span class="nc" id="L49">            System.out.println(&quot;the result is : you got two of a kind! You can do better!&quot;);}</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        else if(count == 2) {</span>
+<span class="nc" id="L51">            System.out.println(&quot;the result is : you got three of a kind! Thats pretty good!&quot;); }</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">        else if(count == 3){</span>
+<span class="nc" id="L53">            System.out.println(&quot;the result is : you got four of a kind! So close!&quot;);}</span>
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        else if(count == 4){</span>
+<span class="fc" id="L55">            System.out.println(&quot;the result is : you got five of a kind! YATZEE!&quot;);}</span>
+
+<span class="fc" id="L57">        return &quot;&quot;;</span>
+    }
+    public void computerplay(){
+<span class="fc" id="L60">        List&lt;Integer&gt; val = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        for(Dice die: this.DiceHand){</span>
+<span class="fc" id="L63">            val.add(Integer.parseInt(die.toString()));</span>
+<span class="fc" id="L64">        }</span>
+
+<span class="fc" id="L66">        int element = 0;</span>
+<span class="fc" id="L67">        int count = 1;</span>
+
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        for(int i = 0; i &lt; val.size(); i++){</span>
+<span class="fc" id="L70">            int tempelement = val.get(i);</span>
+<span class="fc" id="L71">            int tempcount = 0;</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">            for(int k = 1; k &lt; val.size(); k++){</span>
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">                if(val.get(k) == tempelement)   {</span>
+<span class="fc" id="L74">                    tempcount++;</span>
+                }
+            }
+<span class="fc bfc" id="L77" title="All 2 branches covered.">            if(tempcount &gt; count){</span>
+<span class="fc" id="L78">                element = tempelement;</span>
+<span class="fc" id="L79">                count = tempcount;</span>
+            }
+        }
+
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = 0; i &lt; val.size(); i++) {</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">            if (val.get(i) == element) {</span>
+<span class="fc" id="L85">                hold.add(i);</span>
+            }
+        }
+<span class="fc" id="L88">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

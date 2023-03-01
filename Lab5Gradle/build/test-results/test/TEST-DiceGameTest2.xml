@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiceGameTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-04T15:56:48" hostname="KEMO" time="0.007">
+  <properties/>
+  <testcase name="shuno()" classname="DiceGameTest2" time="0.007"/>
+  <system-out><![CDATA[the result is : you got five of a kind! YATZEE!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

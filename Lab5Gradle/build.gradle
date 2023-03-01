@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+plugins{
+    id "org.sonarqube" version "3.4.0.2513"
+}
+
+test{
+    finalizedBy 'jacocoTestReport'
+}
+
+test{
+    useJUnitPlatform()
+}
+
+jacocoTestReport {
+    dependsOn test
+
+    reports{
+        xml.enabled true
+    }
+}
+
+project.tasks["sonarqube"].dependsOn "jacocoTestReport"
+
+testing{
+    suites{
+        test{
+            useJUnitJupiter('5.8.2')
+        }
+    }
+}
+
+
+mainClassName = 'l5'
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+run{
+    standardInput = System.in
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sonarqube {
+    properties {
+        properties["sonar.projectKey"] = 'lab5'
+        properties["sonar.host"] = 'http://localhost:9000'
+        properties["sonar.login"] = 'sqp_cb2d63c088e1f84096bff22e43bee29d322c8483'
+    }
+}

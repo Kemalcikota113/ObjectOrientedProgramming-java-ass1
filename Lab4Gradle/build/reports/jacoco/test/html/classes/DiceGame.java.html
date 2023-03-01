@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DiceGame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab4Gradle</a> &gt; <a href="index.source.html" class="el_package">classes</a> &gt; <span class="el_source">DiceGame.java</span></div><h1>DiceGame.java</h1><pre class="source lang-java linenums">package classes;
+
+import java.util.Scanner;
+
+/**
+ * This class is based on the yatzee game and will create a terminal based game where
+ * you can randomise 5 dices and choose which ones to hold. There is also a cheating
+ * feature.
+ */
+<span class="fc" id="L10">public class DiceGame implements DiceGraphicCheating{</span>
+
+<span class="fc" id="L12">    DicePlayer player = new DicePlayer();</span>
+    public void Yatzy() {
+
+<span class="nc" id="L15">        Scanner sc = new Scanner(System.in);</span>
+
+<span class="nc" id="L17">        int rounds = 0;</span>
+<span class="nc" id="L18">        player.rollAllDice();</span>
+        String index;
+<span class="nc" id="L20">        boolean cheat = false;</span>
+
+        while (true) {
+<span class="nc" id="L23">            player.hold.clear();</span>
+<span class="nc" id="L24">            System.out.println(&quot;\n_____Please pick an option_____&quot;);</span>
+<span class="nc" id="L25">            System.out.println(&quot;This is round &quot; + rounds + &quot; of 3&quot;);</span>
+<span class="nc" id="L26">            System.out.println(&quot;what dices do you want to save? &quot;);</span>
+<span class="nc" id="L27">            System.out.println(&quot;Your numbers are : &quot;);</span>
+<span class="nc" id="L28">            System.out.println(player);</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">            if (!cheat) {</span>
+<span class="nc" id="L30">                System.out.println(&quot;Type cheat to cheat and advance round&quot;);</span>
+            }
+<span class="nc" id="L32">            System.out.println(&quot;Next round&quot;);</span>
+<span class="nc" id="L33">            System.out.println(&quot;\n_________________________________&quot;);</span>
+
+<span class="nc bnc" id="L35" title="All 2 branches missed.">            if (rounds == 3) {</span>
+<span class="nc" id="L36">                System.out.println(shuno());</span>
+<span class="nc" id="L37">                break;</span>
+            }
+
+<span class="nc" id="L40">            boolean doneinner = false;</span>
+<span class="nc" id="L41">            index = &quot;&quot;;</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">            while (doneinner == false) {</span>
+<span class="nc" id="L43">                System.out.println(&quot;type '0' to end round&quot;);</span>
+<span class="nc" id="L44">                index = sc.nextLine();</span>
+
+<span class="nc bnc" id="L46" title="All 4 branches missed.">                if (index.equals(&quot;cheat&quot;) &amp;&amp; !cheat) {</span>
+
+<span class="nc" id="L48">                    System.out.println(&quot;Select die: &quot;);</span>
+<span class="nc" id="L49">                    int selection = sc.nextInt();</span>
+
+<span class="nc" id="L51">                    System.out.println(&quot;Set value: &quot;);</span>
+<span class="nc" id="L52">                    int value = sc.nextInt();</span>
+
+<span class="nc" id="L54">                    player.DiceHand.set(selection - 1, DiceGraphicCheating.setRoll(value));</span>
+<span class="nc" id="L55">                    player.hold(selection - 1);</span>
+<span class="nc" id="L56">                    cheat = true;</span>
+<span class="nc" id="L57">                    doneinner = true;</span>
+<span class="nc" id="L58">                    break;</span>
+                }
+
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                if (index.equals(&quot;0&quot;)) {      // for some reason using index == &quot;0&quot; doesent work.</span>
+<span class="nc" id="L62">                    doneinner = true;</span>
+<span class="nc" id="L63">                    break;</span>
+                }
+
+                try {
+<span class="nc" id="L67">                    player.hold(Integer.parseInt(index) - 1);</span>
+<span class="nc" id="L68">                } catch (Exception e) {</span>
+<span class="nc" id="L69">                    System.out.println(&quot;Invalid dice&quot;);     // Bug</span>
+<span class="nc" id="L70">                }</span>
+
+            }
+
+<span class="nc" id="L74">            player.rollAllDice();</span>
+<span class="nc" id="L75">            rounds++;</span>
+<span class="nc" id="L76">        }</span>
+<span class="nc" id="L77">    }</span>
+    public String shuno() {
+<span class="fc" id="L79">        return player.result();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
